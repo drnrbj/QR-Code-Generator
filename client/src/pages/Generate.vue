@@ -18,11 +18,12 @@
               <label class="block text-sm font-medium text-gray-700 mb-2">
                 QR Content <span class="text-red-500">*</span>
               </label>
-              <div class="relative">
-                <input v-model="form.content" type="text" :placeholder="contentPlaceholder" class="input-field pr-16"
+              <div class="relative flex items-center">
+                <input v-model="form.content" type="text" :placeholder="contentPlaceholder"
+                  class="input-field pr-16 w-full"
                   :class="{ 'border-red-500 focus:ring-red-500': validationErrors.content }" required
                   @input="clearValidationError('content')" />
-                <span class="absolute right-3 top-2 text-xs text-gray-400">
+                <span class="absolute right-3 text-xs text-gray-400">
                   {{ form.content.length }} chars
                 </span>
               </div>
@@ -36,13 +37,21 @@
               <label class="block text-sm font-medium text-gray-700 mb-2">
                 QR Type <span class="text-red-500">*</span>
               </label>
-              <select v-model="form.qrType" class="input-field" @change="onTypeChange">
-                <option value="URL">URL</option>
-                <option value="Plain Text">Plain Text</option>
-                <option value="Email">Email</option>
-                <option value="Phone Number">Phone Number</option>
-                <option value="WiFi">WiFi</option>
-              </select>
+              <div class="relative">
+                <select v-model="form.qrType" class="input-field h-10 w-full appearance-none pr-10"
+                  @change="onTypeChange">
+                  <option value="URL">URL</option>
+                  <option value="Plain Text">Plain Text</option>
+                  <option value="Email">Email</option>
+                  <option value="Phone Number">Phone Number</option>
+                  <option value="WiFi">WiFi</option>
+                </select>
+                <!-- Custom dropdown arrow -->
+                <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
             </div>
 
             <!-- WiFi Fields (Conditional) -->
@@ -75,7 +84,7 @@
                 <label class="block text-sm font-medium text-gray-700 mb-2">
                   Security Type
                 </label>
-                <select v-model="wifiConfig.security" class="input-field">
+                <select v-model="wifiConfig.security" class="input-field h-10">
                   <option value="WPA2">WPA2</option>
                   <option value="WPA">WPA</option>
                   <option value="WEP">WEP</option>
@@ -89,12 +98,19 @@
               <label class="block text-sm font-medium text-gray-700 mb-2">
                 QR Size
               </label>
-              <select v-model="form.size" class="input-field">
-                <option :value="200">200 x 200</option>
-                <option :value="300">300 x 300</option>
-                <option :value="400">400 x 400</option>
-                <option :value="500">500 x 500</option>
-              </select>
+              <div class="relative">
+                <select v-model="form.size" class="input-field h-10 w-full appearance-none pr-10">
+                  <option :value="200">200 x 200</option>
+                  <option :value="300">300 x 300</option>
+                  <option :value="400">400 x 400</option>
+                  <option :value="500">500 x 500</option>
+                </select>
+                <!-- Custom dropdown arrow -->
+                <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
             </div>
 
             <!-- Colors Grid -->
