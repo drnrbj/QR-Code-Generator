@@ -1,4 +1,4 @@
-# QR Code Generator & Manager
+# QR Code Generator
 
 A full-stack application for generating, managing, and tracking QR codes. Supports URL, Plain Text, Email, Phone Number, and WiFi QR codes with customizable colors and sizes.
 
