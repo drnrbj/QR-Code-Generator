@@ -40,14 +40,6 @@ VITE_API_URL=http://localhost:5000/api
 
 ---
 
-## Seed Database (Optional)
-
-```bash
-npm run seed
-```
-
----
-
 ## Running the App
 
 ```bash
@@ -55,8 +47,4 @@ npm run seed
 npm run dev
 ```
 
-| Service       | URL                          |
-|---------------|------------------------------|
-| Frontend      | http://localhost:5173         |
-| Backend API   | http://localhost:5000         |
-| Health Check  | http://localhost:5000/api/health |
+Open at: http://localhost:5173
