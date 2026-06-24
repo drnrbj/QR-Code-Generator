@@ -159,10 +159,10 @@ const StatsIcon = {
 
 // Navigation links configuration
 const navLinks = [
-  { name: 'Dashboard', path: '/', icon: DashboardIcon },
-  { name: 'Generate', path: '/generate', icon: QRIcon },
-  { name: 'History', path: '/history', icon: HistoryIcon },
-  { name: 'Statistics', path: '/statistics', icon: StatsIcon },
+  { name: 'Dashboard', path: '/' },
+  { name: 'Generate', path: '/generate' },
+  { name: 'History', path: '/history' },
+  { name: 'Statistics', path: '/statistics' },
 ]
 
 // Check if a route is currently active
