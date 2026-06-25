@@ -49,15 +49,6 @@ const routes = [
     }
   },
   {
-    path: '/statistics',
-    name: 'Statistics',
-    component: Statistics,
-    meta: {
-      title: 'Statistics',
-      description: 'QR Code usage statistics'
-    }
-  },
-  {
     // Catch all route for 404 pages
     path: '/:pathMatch(.*)*',
     name: 'NotFound',

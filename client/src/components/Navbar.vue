@@ -191,7 +191,6 @@ const navLinks = [
   { name: 'Dashboard', path: '/' },
   { name: 'Generate', path: '/generate' },
   { name: 'History', path: '/history' },
-  { name: 'Statistics', path: '/statistics' },
 ]
 
 // Check if a route is currently active
